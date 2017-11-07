@@ -46,6 +46,7 @@ public class verifyTitle {
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 			capabilities.setCapability("moz:firefoxOptions", options);
 			driver = new FirefoxDriver(capabilities);
+			System.out.println("Testing over");
 		}
 	}
 	
