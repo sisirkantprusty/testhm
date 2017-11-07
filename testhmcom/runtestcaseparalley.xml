@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<test name="TestChrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="crossBrowsers.verifyTitle"></class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="TestFirefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="crossBrowsers.verifyTitle">
+				<methods>
+					<include name="verifyGmail" />
+					<include name="verifyYahoo" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

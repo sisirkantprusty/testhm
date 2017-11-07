@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,6 +21,7 @@ import org.testng.annotations.Test;
 public class verifyTitle {
  
 	WebDriver driver;
+	@BeforeMethod
 	@BeforeTest
 	@Parameters("browser")
   public void setUp(String browserName) {
@@ -45,7 +47,6 @@ public class verifyTitle {
 			capabilities.setCapability("moz:firefoxOptions", options);
 			driver = new FirefoxDriver(capabilities);
 		}
-
 	}
 	
 	@Test
