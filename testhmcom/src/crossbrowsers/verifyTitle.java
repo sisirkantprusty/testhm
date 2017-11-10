@@ -75,7 +75,8 @@ public class verifyTitle {
 			System.out.println(driver.getCurrentUrl());
 			System.out.println(driver.getTitle());
 		}
-		Thread.sleep(50000);
+		Thread.sleep(60000);
+		System.out.println("Teaching to sisir");
 	}
 
 	@Test
